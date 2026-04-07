@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "colab-autopilot"
+version = "0.2.0"
+description = "Autonomous Colab GPU access for AI coding agents — MCP server + background job manager"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+
+dependencies = [
+    "click>=8.0",
+    "cryptography>=41.0",
+    "httpx>=0.25",
+    "mcp>=1.0",
+]
+
+[project.scripts]
+colab-autopilot = "colab_autopilot.cli:main"
